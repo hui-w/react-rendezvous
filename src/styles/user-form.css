@@ -1,0 +1,10 @@
+.user-form {
+	border: 1px solid #ccc;
+	margin: 10px 0px;
+	padding: 10px;
+}
+
+.user-form .formField {
+	width: 200px;
+	padding: 6px 12px;
+}

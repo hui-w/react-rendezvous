@@ -1,0 +1,51 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial",sans-serif;
+    width: 100%;
+    min-width: 320px;
+    font-size: 14px;
+}
+
+.linkButton {
+    background-color: #4285F4;
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 12px;
+    border-radius: 6px;
+}
+
+/* unvisited link */
+a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #fff;
+}
+
+/* mouse over link */
+a:hover {
+    color: #ff0;
+}
+
+/* selected link */
+a:active {
+    color: #0ff;
+}
+
+.app {
+	padding: 8px;
+}
+
+.header {
+	border-bottom: 1px dashed #ccc;
+	padding: 8px;
+}
+
+.main {
+	padding: 8px;
+}
