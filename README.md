@@ -1,2 +1,2 @@
-# event-vanilla
-An example project of React and Redux
+# Event Vanilla
+A sample project of React and Redux for training demo
