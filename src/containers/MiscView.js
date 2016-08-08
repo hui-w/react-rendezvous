@@ -32,7 +32,7 @@ class MiscView extends Component {
 
 	testDeepClone2() {
 		let a = { b: {c:4} , d: { e: {f:1}} }
-		let g = JSON.parse(JSON.stringify(a));
+		let g = {...a};
 		g.d.e = 32
 		console.log(a.d.e);
 	}
