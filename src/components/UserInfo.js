@@ -1,5 +1,5 @@
-import React from 'react'
-import LinkButton from '../components/LinkButton'
+import React from 'react';
+import LinkButton from '../components/LinkButton';
 
 export default function UserInfo({user, onEdit, onDelete}) {
 	return (

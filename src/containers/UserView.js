@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
-import UserForm from '../containers/UserForm'
-import LinkButton from '../components/LinkButton'
-import UserInfo from '../components/UserInfo'
-import {loadUsers, deleteUser, createUser, updateUser} from '../actions/user'
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import UserForm from '../containers/UserForm';
+import LinkButton from '../components/LinkButton';
+import UserInfo from '../components/UserInfo';
+import {loadUsers, deleteUser, createUser, updateUser} from '../actions/user';
 
 class UserView extends Component {
 	constructor(props, context) {
@@ -94,7 +94,7 @@ class UserView extends Component {
 			</div>
 		);
 	}
-}
+};
 
 let mapStateToProps = (state) => {
 	return {

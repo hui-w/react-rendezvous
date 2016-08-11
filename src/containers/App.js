@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import LinkButton from '../components/LinkButton'
+import React, { Component } from 'react';
+import LinkButton from '../components/LinkButton';
 
 class App extends Component {
 	constructor(props, context) {

@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import LinkButton from '../components/LinkButton'
-import '../styles/user-form.css'
+import React, {Component} from 'react';
+import LinkButton from '../components/LinkButton';
+import '../styles/user-form.css';
 
 export default class UserForm extends Component {
 	constructor(props, context) {
@@ -68,4 +68,4 @@ export default class UserForm extends Component {
 			</div>
 		);
 	}
-}
+};

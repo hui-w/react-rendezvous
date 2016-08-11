@@ -1,10 +1,10 @@
-import update from 'react/lib/update'
+import update from 'react/lib/update';
 import {
 	USERS_LOAD,
 	USERS_CREATE,
 	USERS_UPDATE,
 	USERS_DELETE
-} from '../actions/user'
+} from '../actions/user';
 
 const initialState = {
 	list: []
@@ -56,4 +56,4 @@ export default function user(state = initialState, action) {
 	return {...state,
 		...handler(state, action)
 	};
-}
+};

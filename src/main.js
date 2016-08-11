@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore, combineReducers} from 'redux'
+import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import App from './containers/App';
 import MiscView from './containers/MiscView';
@@ -15,7 +15,8 @@ let views = [
 
 const reducer = combineReducers({
 	...reducers
-})
+});
+
 const store = createStore(
 	reducer
 );
@@ -25,4 +26,4 @@ ReactDOM.render(
 		<App views={views} onShowStore={()=>console.log(store.getState())} />
 	</Provider>,
 	document.getElementById('root')
-)
+);
