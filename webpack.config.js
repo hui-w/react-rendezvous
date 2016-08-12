@@ -22,16 +22,12 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel'],
+      loaders: ['babel-loader', 'eslint-loader'],
       exclude: /node_modules/,
       include: __dirname
     }, {
       test: /\.css$/,
       loader: "style!css"
-    }, {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loaders: ['babel-loader', 'eslint-loader']
     }]
   }
 }
