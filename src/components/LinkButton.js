@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-export default function LinkButton({children, onClick}) {
-	return (
-		<a href="javascript: void(0)" onClick={onClick} className="linkButton">{children}</a>
-	)
+export default function LinkButton({ children, onClick }) {
+  return (
+    <span onClick={onClick} className="linkButton">{children}</span>
+  );
 }
+
+LinkButton.propTypes = {
+  children: PropTypes.string,
+  onClick: PropTypes.func
+};
