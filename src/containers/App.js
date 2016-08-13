@@ -1,39 +1,35 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { Link, IndexLink } from 'react-router';
 import LinkButton from '../components/LinkButton';
 
 class App extends Component {
   constructor(props, context) {
     super(props, context);
-
-    this.state = {
-      viewIndex: -1
-    };
+    this.showStore = this.showStore.bind(this);
   }
 
-  setViewIndex(index) {
-    this.setState({
-      viewIndex: index
-    });
+  showStore() {
+    console.log(this.props.state);
   }
 
   render() {
-    const views = this.props.views;
-    let onShowStore = this.props.onShowStore;
     return (
       <div className="app">
         <div className="header">
-          <LinkButton onClick={() => this.setViewIndex(1)}>Users View</LinkButton>
+          <IndexLink to="/" className="linkButton" activeClassName="active-item">Home</IndexLink>
+          {' '}
+          <Link to="/users" className="linkButton" activeClassName="active-item">Users View</Link>
+          {' '}
+          <Link to="/misc" className="linkButton" activeClassName="active-item">Misc View</Link>
           {' '}
           <div style={{ float: 'right' }}>
-            <LinkButton onClick={() => this.setViewIndex(0)}>Misc View</LinkButton>
-            {' '}
-            <LinkButton onClick={onShowStore}>Show Store</LinkButton>
+            <LinkButton onClick={this.showStore}>Show Store</LinkButton>
             {' '}
           </div>
         </div>
         <div className="main">
-          {this.state.viewIndex > -1 &&
-            views[this.state.viewIndex]}
+          {this.props.children}
         </div>
       </div>
     );
@@ -41,8 +37,14 @@ class App extends Component {
 }
 
 App.propTypes = {
-  views: PropTypes.array,
-  onShowStore: PropTypes.func
+  children: PropTypes.object,
+  state: PropTypes.object
 };
 
-export default App;
+const mapStateToProps = (state) => ({
+  state
+});
+
+export default connect(
+  mapStateToProps
+)(App);

@@ -18,6 +18,10 @@ body {
     cursor: pointer;
 }
 
+.active-item {
+    color: #000 !important;
+}
+
 /* unvisited link */
 a:link {
     color: #fff;
