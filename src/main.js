@@ -23,7 +23,9 @@ ReactDOM.render(
     <Router history={hashHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={HomeView} />
-        <Route path="/users" component={UserView} />
+        <Route path="/users" component={UserView}>
+          <Route path=":index" component={UserView} />
+        </Route>
         <Route path="/misc" component={MiscView} />
       </Route>
     </Router>

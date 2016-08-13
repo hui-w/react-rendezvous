@@ -14,6 +14,7 @@ class MiscView extends Component {
   }
 
   testDeepClone1() {
+    console.log(Object);
     const a = { b: { c: 4 }, d: { e: { f: 1 } } };
     const g = Object.assign({ }, a);
     const h = JSON.parse(JSON.stringify(a));

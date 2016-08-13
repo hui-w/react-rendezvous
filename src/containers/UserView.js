@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { hashHistory } from 'react-router';
 import UserForm from '../containers/UserForm';
 import LinkButton from '../components/LinkButton';
 import UserInfo from '../components/UserInfo';
@@ -11,25 +12,25 @@ class UserView extends Component {
     this.onAdd = this.onAdd.bind(this);
     this.onSave = this.onSave.bind(this);
 
-    this.state = {
-      editingIndex: -1
-    };
+    this.getEditingIndex(props);
   }
 
   componentDidMount() {
     this.props.dispatch(loadUsers());
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.params.index !== this.props.params.index) {
+      this.getEditingIndex(nextProps);
+    }
+  }
+
   onAdd() {
-    this.setState({
-      editingIndex: this.props.users.length + 1
-    });
+    hashHistory.push(`/users/${this.props.users.length + 1}`);
   }
 
   onEdit(index) {
-    this.setState({
-      editingIndex: index
-    });
+    hashHistory.push(`/users/${index}`);
   }
 
   onDelete(index) {
@@ -52,10 +53,18 @@ class UserView extends Component {
     this.hideForm();
   }
 
+  getEditingIndex(props) {
+    let editingIndex = props.params.index;
+    if (!editingIndex) {
+      editingIndex = -1;
+    }
+    this.state = {
+      editingIndex
+    };
+  }
+
   hideForm() {
-    this.setState({
-      editingIndex: -1
-    });
+    hashHistory.push('/users');
   }
 
   render() {
@@ -101,6 +110,7 @@ class UserView extends Component {
 
 UserView.propTypes = {
   users: PropTypes.array,
+  params: PropTypes.object,
   dispatch: PropTypes.func
 };
 

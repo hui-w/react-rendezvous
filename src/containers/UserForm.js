@@ -6,6 +6,7 @@ export default class UserForm extends Component {
   constructor(props, context) {
     super(props, context);
     this.save = this.save.bind(this);
+    this.handleChange = this.handleChange.bind(this);
 
     const user = props.user;
     this.state = {

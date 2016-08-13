@@ -19,6 +19,7 @@ body {
 }
 
 .active-item {
+    background-color: #CCC;
     color: #000 !important;
 }
 
