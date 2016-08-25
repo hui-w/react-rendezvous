@@ -57,11 +57,16 @@ class MiscView extends Component {
   render() {
     return (
       <div>
-        <LinkButton onClick={this.testDeepClone1}>Test Deep Clone 1</LinkButton>
-        {' '}
-        <LinkButton onClick={this.testDeepClone2}>Test Deep Clone 2</LinkButton>
-        {' '}
-        <LinkButton onClick={() => this.testSetState()}>Test Set State</LinkButton>
+        <div>
+          <LinkButton onClick={this.testDeepClone1}>Test Deep Clone 1</LinkButton>
+          {' '}
+          <LinkButton onClick={this.testDeepClone2}>Test Deep Clone 2</LinkButton>
+          {' '}
+          <LinkButton onClick={() => this.testSetState()}>Test Set State</LinkButton>
+        </div>
+        <p>
+          Check the output in the browser's console...
+        </p>
       </div>
     );
   }

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+import 'babel-polyfill';
 import App from './containers/App';
 import HomeView from './components/HomeView';
 import MiscView from './containers/MiscView';
