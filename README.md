@@ -12,7 +12,7 @@ A sample project of React and Redux for training demo
 ## Demo
 [https://hui-w.github.io/react-rendezvous/](https://hui-w.github.io/react-rendezvous/)
 
-## How to run
+## How To
 ```
 npm install
 ```
