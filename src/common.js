@@ -53,7 +53,7 @@ function addItem_1(list, item) {
 
 function addItem_2(list, item) {
   // Use concat which will not modify the original array
-  return list.concat(item);;
+  return list.concat(item);
 }
 
 function addItem_3(list, item) {

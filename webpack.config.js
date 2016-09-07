@@ -16,13 +16,10 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
-  eslint: {
-    configFile: './.eslintrc'
-  },
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel-loader', 'eslint-loader'],
+      loaders: ['babel-loader'],
       exclude: /node_modules/,
       include: __dirname
     }, {
