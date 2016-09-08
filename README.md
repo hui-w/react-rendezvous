@@ -1,4 +1,4 @@
-# react-rendezvous
+# React Rendezvous
 A sample project of React and Redux for training demo
 
 ## Keywords
