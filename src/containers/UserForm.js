@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import LinkButton from '../components/LinkButton';
 import '../styles/user-form.css';
 

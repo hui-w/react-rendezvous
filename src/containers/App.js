@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link, IndexLink } from 'react-router';
 import LinkButton from '../components/LinkButton';
@@ -20,6 +21,8 @@ class App extends Component {
           <IndexLink to="/" className="linkButton" activeClassName="active-item">Home</IndexLink>
           {' '}
           <Link to="/users" className="linkButton" activeClassName="active-item">Users View</Link>
+          {' '}
+          <Link to="/todo" className="linkButton" activeClassName="active-item">TODO</Link>
           {' '}
           <Link to="/misc" className="linkButton" activeClassName="active-item">Misc View</Link>
           {' '}

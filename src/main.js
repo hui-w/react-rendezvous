@@ -8,6 +8,7 @@ import App from './containers/App';
 import HomeView from './components/HomeView';
 import MiscView from './containers/MiscView';
 import UserView from './containers/UserView';
+import TodoList from './containers/TodoList';
 import * as reducers from './reducers';
 import './styles/main.css';
 
@@ -28,6 +29,7 @@ ReactDOM.render(
           <Route path=":index" component={UserView} />
         </Route>
         <Route path="/misc" component={MiscView} />
+        <Route path="/todo" component={TodoList} />
       </Route>
     </Router>
   </Provider>,
